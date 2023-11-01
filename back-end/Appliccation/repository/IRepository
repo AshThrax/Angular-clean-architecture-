@@ -1,0 +1,10 @@
+
+public interface IRepository<T> where T class
+{
+
+    Task Create(T item);
+    Task Update(int id, T item);
+    Task<IEnumerable<T>> GetAll();
+    Task<T> GetById(int id);
+    void Delete(int id);
+}

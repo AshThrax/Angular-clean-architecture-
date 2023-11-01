@@ -1,0 +1,5 @@
+public class AlbumDto
+{
+    public int Id { get; set; }
+    public List<Song> Songs { get; set; }
+}

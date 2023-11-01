@@ -1,0 +1,5 @@
+using SharedLibrary.interface;
+public class Repository<T> : IRepository<T> where T : class
+{
+
+}
