@@ -15,7 +15,7 @@ export class AccueilComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.service.getJson('/asset/files/accueil.json').subscribe
+    this.service.getJson('asset/files/Accueil.json').subscribe
       (
         (response: any) => { this.post = response;},
         (error: any) => { console.log(error); }

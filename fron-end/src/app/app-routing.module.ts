@@ -9,7 +9,7 @@ import { MerchComponent } from './page/merch/merch.component';
 const routes: Routes = [
   {path:'Accueil' ,component: AccueilComponent},
   {path:'Contact',component:ContactComponent},
-  { path: 'Concert', component: ConcertComponent },
+  { path:'Concert', component: ConcertComponent},
    {path:'Merch',component: MerchComponent}
 ];
 

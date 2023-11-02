@@ -11,6 +11,7 @@ import { ConcertComponent } from './page/concert/concert.component';
 import { AlbumListComponent } from './Component/album-list/album-list.component';
 import { MerchComponent } from './page/merch/merch.component';
 import { AlbumSingleComponent } from './Component/album-single/album-single.component';
+import {  RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { AlbumSingleComponent } from './Component/album-single/album-single.comp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

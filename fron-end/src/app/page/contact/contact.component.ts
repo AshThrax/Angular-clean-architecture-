@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent implements OnInit{
   jsonContact !: any;
 
   constructor(private contactservice: ContactService) { }
 
   ngOnInit(): void {
-    this.contactservice.getContact('/assets/files/contact.json').subscribe(
+    this.contactservice.getContact('assets/files/contact.json').subscribe(
         (response) =>{
         this.jsonContact = response;
         console.log('Donnée reçue', this.jsonContact);

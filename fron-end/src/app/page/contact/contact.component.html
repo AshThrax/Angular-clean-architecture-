@@ -1,5 +1,5 @@
 
-<div  class="" >
+<div *ngIf="jsonContact" >
  <h2 class="display-3"><ins>Contact</ins></h2>
 <div class="row mt-2 mb-2 ">
   <div class="col col-sm cards">
@@ -60,4 +60,7 @@
     </div>
   </div>
 </div>
+</div>
+<div *ngElse >
+  <p>data loading</p>
 </div>
