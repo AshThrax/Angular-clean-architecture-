@@ -13,7 +13,7 @@ export class ContactComponent implements OnInit {
   constructor(private contactservice: ContactService) { }
 
   ngOnInit(): void {
-    this.contactservice.getContact('').subscribe(
+    this.contactservice.getContact('/assets/file/').subscribe(
         (response) =>{
         this.jsonContact = response;
         console.log('Donnée reçue', this.jsonContact);

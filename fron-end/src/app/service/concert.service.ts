@@ -7,8 +7,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ConcertService {
-
-  ConcertJsonFile!: any;
+  
   constructor(private http: HttpClient) { }
 
   public getConcert(url:string):Observable<string> {
