@@ -10,16 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class AccueilComponent implements OnInit {
 
   post !: any;
-  subscribed !:Subscriber<Observable<string>>
   constructor(private service: AccueilService)
   {
 
   }
   ngOnInit(): void {
-    this.post = this.service.getJson("assets/files/accueil.json")
+
+    this.getdata();
+  }
+  getdata(): void
+  {
+     this.post = this.service.getJson("assets/files/accueil.json")
       .subscribe(x =>
         this.post = x
         );
-
   }
 }

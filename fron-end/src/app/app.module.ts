@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Component/header/header.component';
@@ -12,6 +11,7 @@ import { AlbumListComponent } from './Component/album-list/album-list.component'
 import { MerchComponent } from './page/merch/merch.component';
 import { AlbumSingleComponent } from './Component/album-single/album-single.component';
 import {  RouterModule } from '@angular/router';
+import { SharedModule } from './module/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import {  RouterModule } from '@angular/router';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
