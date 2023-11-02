@@ -8,11 +8,20 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class AccueilService {
 
-  jsonAccueil !: string[] ;
+  jsonAccueil !: string ;
   constructor(private http: HttpClient) { }
 
   public getJson (url: string): Observable<string>
   {
-    return this.http.get<string>(url);
+    return this.http.get<string>(url).subscribe(
+      (response) => {
+        this.jsonAccueil = response;
+        console.log('Donnée reçue', this.jsonAccueil);
+        //
+      },
+      (error) => {
+        console.error('Error :', error);
+      }
+    );
   }
 }
