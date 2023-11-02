@@ -1,3 +1,4 @@
+import { Observable, Subscriber } from 'rxjs';
 import { AccueilService } from './../../service/accueil.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,17 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccueilComponent implements OnInit {
 
-  post: any;
-
+  post !: any;
+  subscribed !:Subscriber<Observable<string>>
   constructor(private service: AccueilService)
   {
 
   }
   ngOnInit(): void {
-    this.service.getJson('asset/files/Accueil.json').subscribe
-      (
-        (response: any) => { this.post = response;},
-        (error: any) => { console.log(error); }
-      );
+    this.post = this.service.getJson("assets/files/accueil.json")
+      .subscribe(x =>
+        this.post = x
+        );
+
   }
 }
