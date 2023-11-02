@@ -15,7 +15,7 @@ export class ConcertComponent implements OnInit {
   }
 
   ngOnInit(): void {
-   this.concertservice.getConcert('/assets/file')
+   this.concertservice.getConcert('/assets/files/concert.json')
                       .subscribe(
                           (response) => {
                               this.jsonConcert = response;

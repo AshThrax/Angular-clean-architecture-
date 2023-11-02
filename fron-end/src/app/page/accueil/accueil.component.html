@@ -1,5 +1,5 @@
 
-<div >
+<div *ngIf="post" >
     <h2 class="display-3"> <ins>Accueil</ins></h2>
   <div class="row mt-2 mb-2 ">
     <p class="col col-sm" >
@@ -62,4 +62,8 @@
       eum fugiat qu
     </p>
   </div>
+</div>
+
+<div *ngElse>
+  <p> no data loaded </p>
 </div>
