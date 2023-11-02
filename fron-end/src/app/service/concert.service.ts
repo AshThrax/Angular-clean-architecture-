@@ -12,6 +12,6 @@ export class ConcertService {
   constructor(private http: HttpClient) { }
 
   public getConcert(url:string):Observable<string> {
-    return this.http.get<string>(url).subscribe;
+    return this.http.get<string>(url);
   }
 }
