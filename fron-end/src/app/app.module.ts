@@ -29,7 +29,7 @@ import { SharedModule } from './module/shared/shared.module';
     BrowserModule,
     AppRoutingModule,
     RouterModule,
-    SharedModule
+    SharedModule //contain shared modules beetween component
   ],
   providers: [],
   bootstrap: [AppComponent]
