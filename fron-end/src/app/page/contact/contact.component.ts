@@ -12,6 +12,10 @@ export class ContactComponent implements OnInit{
 
   constructor(private contactservice: ContactService) { }
 
+  /**
+   * lorsque le composant est initilisé on récupère les donnée et les information relatifs au contact present
+   * dans un fichier json ,asset/filoes/concert.json
+   */
   ngOnInit(): void {
     this.contactservice.getContact('assets/files/contact.json').subscribe(
         (response) =>{

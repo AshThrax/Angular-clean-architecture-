@@ -1,28 +1,29 @@
-<p>{{ post | json}}</p>
+
 <div *ngIf="post" >
     <h2 class="display-3"> <ins>Accueil</ins></h2>
   <div class="row mt-2 mb-2 ">
-    <p class="col col-sm" >
+    <p class="col col-sm shadow rounded" >
       {{post.test[0].test}}
     </p>
-    <p class="col col-sm">
+    <p class="col col-sm shadow rounded">
       {{post.test[1].test}}
     </p>
-    <p class="col col-sm mt-2 mb-2">
+    <p class="col col-sm shadow rounded">
       {{post.test[2].test}}
     </p>
   </div>
-  <div class="row ">
-    <img src="{{post.test[5].test }}" alt="" class="col col-sm img-fluid">
-    <p class="col col-sm">
+  <div class="row mt-2 mb-2 ">
+    <img src="{{post.test[5].test }}" alt="" class="col col-sm img-fluid h-auto w-auto">
+    <p class="col col-sm shadow rounded">
         {{post.test[3].test}}
     </p>
-    <p class="col col-sm">
+    <p class="col col-sm shadow rounded">
       {{post.test[4].test}}
     </p>
   </div>
 </div>
 
 <div *ngElse>
+  //<p>{{ post | json}}</p>
   <p> no data loaded </p>
 </div>

@@ -1,5 +1,32 @@
 
-<p>{{jsonConcert | json}}</p>
+<p [hidden]>{{jsonConcert | json}}</p>
 <div id="Concert" class="">
  <h2 class="display-3"><ins>Concert</ins></h2>
+<!-- fixed the table and the ngfor -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>titre</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody >
+      <!-- pour chaque concert present dans la listes affiche l'id le titre et la description-->
+        <tr *ngFor="let concert of jsonConcert">
+          <td>
+            {{concert.id}}
+          </td>
+          <td>
+            {{concert.title}}
+          </td>
+          <td>
+            {{concert.decription}}
+          </td>
+          <td>
+            {{concert.test}}
+          </td>
+        </tr>
+    </tbody>
+  </table>
 </div>

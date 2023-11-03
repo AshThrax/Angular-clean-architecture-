@@ -9,11 +9,17 @@ import { Component, OnInit } from '@angular/core';
 export class ConcertComponent implements OnInit {
 
   jsonConcert !: any;
+  /*
+    injection du service lié a la page concert
 
+  */
   constructor(private concertservice : ConcertService)
   {
   }
-
+  /*
+  * a l'initialisation du composant on récupère
+    les donnée relative au donnée de cocert envoier par l'api
+  */
   ngOnInit(): void {
    this.concertservice.getConcert('assets/files/concert.json')
                       .subscribe(

@@ -12,6 +12,7 @@ import { MerchComponent } from './page/merch/merch.component';
 import { AlbumSingleComponent } from './Component/album-single/album-single.component';
 import {  RouterModule } from '@angular/router';
 import { SharedModule } from './module/shared/shared.module';
+import { MusicPlayerComponent } from './Component/music-player/music-player.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { SharedModule } from './module/shared/shared.module';
     ConcertComponent,
     AlbumListComponent,
     MerchComponent,
-    AlbumSingleComponent
+    AlbumSingleComponent,
+    MusicPlayerComponent
   ],
   imports: [
     BrowserModule,
