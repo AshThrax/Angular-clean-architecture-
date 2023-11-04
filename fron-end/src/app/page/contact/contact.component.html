@@ -1,20 +1,18 @@
 
-<div>
-
-  <p>{{jsonContact | json}}</p>
-</div>
 <div *ngIf="jsonContact" >
- <h2 class="display-3"><ins>Contact</ins></h2>
-<div class="row mt-2 mb-2 ">
-  <div class="col col-sm cards">
+ <h2 class="display-3 mb-4"><ins>Contact</ins></h2>
+
+<div  class="row mt-2 mb-2 ">
+  <div class="col col-sm-3 cards">
 <!-- contact json -->
     <div class="card shadow bg-body-tertiary rounded" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="{{jsonContact[0].img}}" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Instagram</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+        <h5 class="card-title">{{jsonContact[0].title}}</h5>
+        <p class="card-text mb-2 ">
+          {{jsonContact[0].description}}
         </p>
-        <a href="https://www.instagram.com/synth_zer0.exe/" class="btn btn-outline-danger ">
+        <a href="{{jsonContact[0].source}}" class="btn btn-outline-danger mt-2">
           Go on Instagram
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram"
         viewBox="0 0 16 16">
@@ -25,15 +23,14 @@
       </div>
     </div>
   </div>
-  <div class="col col-sm cards">
-
+  <div class="col col-sm-3 cards">
     <div class="card shadow bg-body-tertiary rounded" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="{{jsonContact[1].img}}" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Facebook</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-        </p>
-        <a href="https://www.facebook.com/SynthZero/?paipv=0&eav=AfbzT4wwBZ9xFKUzYS7eqZU1f-6xdEOGV0xEqFioC8F2vE9fv_uUCce2lIF7Bb7kRG4&_rdr" class="btn btn-outline-danger ">
+        <h5 class="card-title">{{jsonContact[1].title}}</h5>
+        <p class="card-text mb-2 ">
+          {{jsonContact[1].description}}
+        <a href="{{jsonContact[1].source}}" class="btn btn-outline-danger mt-2">
           Go on Facebook
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook"
             viewBox="0 0 16 16">
@@ -45,15 +42,16 @@
     </div>
     <img src="" alt="">
   </div>
-  <div class="col col-sm cards">
+  <div class="col col-sm-3 cards ms-2 me-2">
 
     <div class="card shadow bg-body-tertiary rounded" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
+      <img src="{{jsonContact[2].img}}" class="card-img-top img-fluid" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Youtube</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+        <h5 class="card-title mb-2 ">{{jsonContact[2].title}}</h5>
+        <p class="card-text">
+      {{jsonContact[2].description}}
         </p>
-        <a href="https://www.youtube.com/channel/UCXjjksGiGLqGmXmPjpCjStQ" class=" btn btn-outline-danger ">Go on Youtube
+        <a href="{{jsonContact[2].source}}" class=" btn btn-outline-danger mt-2">Go on Youtube
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
           viewBox="0 0 16 16">
           <path
@@ -64,7 +62,4 @@
     </div>
   </div>
 </div>
-</div>
-<div *ngElse >
-  <p>data loading</p>
 </div>

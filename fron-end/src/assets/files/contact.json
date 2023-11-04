@@ -1,22 +1,21 @@
-{
-  "contact":[
+[
     {
-      "img":"",
-      "title":"instagram",
-      "description":"",
-      "source":""
+      "img":"https://cdn.pixabay.com/photo/2016/08/09/17/52/instagram-1581266_1280.jpg",
+      "title":"Instagram",
+      "description":"rejoignez moi sur instagram ou je vous partage les dernières annonces concernant Synth Zero",
+      "source":"https://www.instagram.com/synth_zer0.exe/"
     },
     {
-      "img":"",
-      "title":"facebook",
-      "description":"",
-      "source":""
+      "img":"https://cdn.pixabay.com/photo/2017/06/22/06/22/facebook-2429746_1280.png",
+      "title":"Facebook",
+      "description":"rejoignez moi sur Facebook ou je vous partage les dernières annonces concernant mes concert ou mes nouveaux morceaux",
+      "source":"https://www.facebook.com/SynthZero/?paipv=0&eav=AfbzT4wwBZ9xFKUzYS7eqZU1f-6xdEOGV0xEqFioC8F2vE9fv_uUCce2lIF7Bb7kRG4&_rdr"
     },
     {
-      "img":"Youtube",
-      "title":"",
-      "description":"",
-      "source":""
+      "img":"https://cdn.pixabay.com/photo/2016/07/03/18/36/youtube-1495277_1280.png",
+      "title":"Youtube",
+      "description":"si vous désirer écouter les dernière sortie de synthzero c'est ici",
+      "source":"https://www.youtube.com/channel/UCXjjksGiGLqGmXmPjpCjStQ"
     }
   ]
-}
+
