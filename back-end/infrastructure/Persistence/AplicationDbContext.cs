@@ -1,15 +1,27 @@
-using Microsoft.EntityframeworkCore;
-public class ApplicationDbContext : DbContext
+using Microsoft.EntityFrameworkCore;
+using Application.Common.Interfaces;
+using System.Reflection;
+using Domain.Entity;
+
+public class ApplicationDbContext : DbContext,IApplicationDbContext
 {
 
-    ApplicationDbContext(ApplicationDbContext<Option> context) : base(context)
+    ApplicationDbContext(DbContextOptions<ApplicationDbContext> context) : base(context)
     {
 
     }
 
-    DbSet<Song> Song{ get; set;}
-    DbSet<Concert> Concert { get; set; }
-    DbSet<Album> Album { get; set; }
+    public DbSet<Song> Song{ get; set;}
+    public DbSet<Concert> Concert { get; set; }
+    public DbSet<Album> Album { get; set; }
 
-    protected Task<int> Savechanges
+    protected Task<int> SavechangesAsync(CancellationToken cancellationToken =new CancellationToken())
+    {
+        return base.SaveChangesAsync(cancellationToken);
+    }
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        builder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        base.OnModelCreating(builder);
+    }
 }

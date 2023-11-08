@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Track } from 'ngx-audio-player';
 @Component({
   selector: 'app-music-player',
   templateUrl: './music-player.component.html',
   styleUrls: ['./music-player.component.css']
 })
-export class MusicPlayerComponent {
+export class MusicPlayerComponent implements OnInit {
 
 onTrackPlaying(event:any) {
     console.log(event);
@@ -55,25 +55,28 @@ onTrackSelected(event:any) {
   mssapDisplayRepeatControls = true;
   mssapDisplayVolumeControls = true;
   mssapDisplayVolumeSlider = false;
+  mssapPlaylist: Track[] = [];
 
 
-    mssapPlaylist: Track[] = [
+  ngOnInit(){
+
+     this.mssapPlaylist=[
     {
-      title: 'Audio Title',
-      link: 'Link to Streaming URL',
+      title: 'Patient Zero',
+      link: 'https://music.youtube.com/watch?v=jCYnLYuGunM&si=Y6o08cEtsxHd4-ch',
       mediaType: 'stream'
       },
       {
-      title: 'Audio Title',
-      link: 'Link to Streaming URL',
+      title: 'Megalo',
+      link: 'https://music.youtube.com/watch?v=02PN62j-GAA&si=2xaItwlwRPbNyXvk',
       mediaType: 'stream'
       },
       {
-      title: 'Audio Title',
-      link: 'Link to Streaming URL',
+      title: 'Deep in The Night',
+      link: 'https://music.youtube.com/watch?v=5onuMsu3-CA&si=fJLMiJslQymipXGY',
       mediaType: 'stream'
     }
     ];
-
+  }
 }
 

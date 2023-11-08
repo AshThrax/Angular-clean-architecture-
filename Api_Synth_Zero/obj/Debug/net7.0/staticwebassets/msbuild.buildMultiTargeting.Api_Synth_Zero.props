@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Api_Synth_Zero.props" />
+</Project>

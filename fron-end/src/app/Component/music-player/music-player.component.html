@@ -1,17 +1,19 @@
-<p>music-player works!</p>
-<ngx-audio-player [autoPlay]="false"
-                    muted="muted"
-  [disablePositionSlider]="mssapDisablePositionSlider"
-  [displayRepeatControls]="mssapDisplayRepeatControls"
-  [displayVolumeControls]="mssapDisplayVolumeControls"
-  [displayVolumeSlider]="mssapDisplayVolumeSlider"
+<DIV class="container bg-light">
+  <ngx-audio-player [autoPlay]="true"
+                      muted="muted"
+    [playlist]="mssapPlaylist"
+    [disablePositionSlider]="mssapDisablePositionSlider"
+    [displayRepeatControls]="mssapDisplayRepeatControls"
+    [displayVolumeControls]="mssapDisplayVolumeControls"
+    [displayVolumeSlider]="mssapDisplayVolumeSlider"
 
-  [displayTitle]="mssapDisplayTitle"
+    [displayTitle]="mssapDisplayTitle"
 
-  (trackEnded)="onEnded($event)"
-   (trackPlaying)="onTrackPlaying($event)"
-    (trackPaused)="onTrackPaused($event)"
     (trackEnded)="onEnded($event)"
-    (nextTrackRequested)="onNextTrackRequested($event)"
-    (previousTrackRequested)="onPreviousTrackRequested($event)"
-    (trackSelected)="onTrackSelected($event)"></ngx-audio-player>
+     (trackPlaying)="onTrackPlaying($event)"
+      (trackPaused)="onTrackPaused($event)"
+      (trackEnded)="onEnded($event)"
+      (nextTrackRequested)="onNextTrackRequested($event)"
+      (previousTrackRequested)="onPreviousTrackRequested($event)"
+      (trackSelected)="onTrackSelected($event)"></ngx-audio-player>
+</DIV>
