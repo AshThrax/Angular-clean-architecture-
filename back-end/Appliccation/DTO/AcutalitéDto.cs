@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Application.DTO
 {
-    public class AcutalitéDto : IMapFrom<Actualité>
+    public class AcutalitéDto : IMapFrom<ActualitéDto>
     {
         public int Id { get; set; }
         public string Titre { get; set; }
@@ -18,7 +18,7 @@ namespace Application.DTO
 
         public void Mapping(Profile Profile)
         {
-            Profile.CreateMap<Actualité, AcutalitéDto>();
+            Profile.CreateMap<ActualitéDto, AcutalitéDto>();
         }
     }
 }

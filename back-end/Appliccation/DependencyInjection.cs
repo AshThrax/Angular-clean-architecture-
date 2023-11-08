@@ -1,4 +1,7 @@
-﻿using FluentValidation;
+﻿using Application.Common.Behaviour;
+using Application.Services;
+using FluentValidation;
+using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -14,6 +17,7 @@ public static class DependencyInjection
         //ajout mediateur
         //mediateur 12.0.1
         service.AddMediatR(Cfg=>Cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
+        service.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
         return service;
     }
 }
