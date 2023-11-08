@@ -17,6 +17,6 @@ namespace Application.Common.Interfaces
         DbSet<Concert> Concert { get; set; }
 
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
-
+        object Set<T>();
     }
 }
